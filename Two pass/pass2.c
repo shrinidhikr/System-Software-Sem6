@@ -1,4 +1,3 @@
-//Pass-2 of two-pass assembler
 #include<stdio.h>
 #include<string.h>
 
@@ -7,8 +6,8 @@ void main()
 	FILE *f1,*f2,*f3,*f4;
 	char label[20],opcode[20],operand[20];
 	int address,sa,len,i;
-	f1=fopen("input.txt","r");
-	f4=fopen("output.txt","w");
+	f1=fopen("input2.txt","r");
+	f4=fopen("output2.txt","w");
 	fscanf(f1,"%x %s %s %s",&address,label,opcode,operand);
 	if(strcmp(opcode,"START")==0)
 	{
