@@ -4,9 +4,9 @@
 void main()
 {
 	FILE *f1,*f2,*f3,*f4;
-	f1=fopen("input.txt","r");
+	f1=fopen("input1.txt","r");
 	f3=fopen("symtab.txt","w");
-	f4=fopen("output.txt","w");
+	f4=fopen("output1.txt","w");
 	int lc,sa;
 	char label[20],opcode[20],operand[20];
 	fscanf(f1,"%s %s %s",label,opcode,operand);
