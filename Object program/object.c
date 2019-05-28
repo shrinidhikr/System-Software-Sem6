@@ -42,16 +42,12 @@ void main()
 				fscanf(f4,"%s %s %s %s %s",saddress,label,opcode,operand,objcode);
 			
 			strcat(textrec,saddress);
-			strcat(temp,objcode);
-			strcat(temp," ");
-			textlen=textlen+(strlen(objcode)/2);	
+			
 		}
-		else
-		{
 			textlen=textlen+(strlen(objcode)/2);
 			strcat(temp,objcode);
 			strcat(temp," ");
-		}
+		
 		fscanf(f4,"%s %s %s %s %s",saddress,label,opcode,operand,objcode);
 	}
 	if(textlen!=0)
