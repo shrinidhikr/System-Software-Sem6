@@ -38,13 +38,13 @@ void main()
 			strcpy(temp,"");
 			strcpy(textrec,"T 00");
 			fscanf(f4,"%s %s %s %s %s",saddress,label,opcode,operand,objcode);
-			if(strcmp(objcode,"-")!=0)
-			{
-				strcat(textrec,saddress);
-				strcat(temp,objcode);
-				strcat(temp," ");
-				textlen=textlen+(strlen(objcode)/2);	
-			}
+			while(strcmp(objcode,"-")==0 && strcmp(opcode,"END")!=0)
+				fscanf(f4,"%s %s %s %s %s",saddress,label,opcode,operand,objcode);
+			
+			strcat(textrec,saddress);
+			strcat(temp,objcode);
+			strcat(temp," ");
+			textlen=textlen+(strlen(objcode)/2);	
 		}
 		else
 		{
